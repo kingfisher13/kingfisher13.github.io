@@ -31,3 +31,5 @@ exclude:
   - Gemfile.lock
 sass:
   sass_dir: _sass
+collections:
+  - portfolio_links

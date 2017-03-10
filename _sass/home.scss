@@ -1,0 +1,43 @@
+// Styles for the main area of the home page
+
+.home-spacer {
+  height: 120px;
+  width: 100%;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-post-wrapper {
+  margin-right: 30px;
+  width: 280px;
+}
+
+.home-post--card-wrapper {
+  align-items: center;
+  border: 1px solid $medium-brown;
+  display: flex;
+  height: 280px;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-post--image-wrapper {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 40px);
+  justify-content: center;
+  width: calc(100% - 40px);
+}
+
+.home-post--title {
+  color: $dark-brown;
+  font-family: $display-font;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+}
