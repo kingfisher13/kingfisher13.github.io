@@ -20,7 +20,7 @@ $dark-brown:       #7c655f;
 $medium-brown:     #8d7a64;
 $light-brown:      #f9f6f1;
 
-$background-color: #fdfdfd;
+$site-background:  url('texture.png') repeat;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -44,4 +44,6 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+@import "layout";
 @import "ribbon";
+@import "sidebar";

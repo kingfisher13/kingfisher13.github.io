@@ -1,0 +1,20 @@
+// Layout
+
+body {
+  background: $site-background;
+}
+
+header {
+  z-index: 3;
+}
+
+sidebar {
+  height: 100%;
+  position: fixed;
+  width: 300px;
+  z-index: 1;
+}
+
+main {
+  z-index: 2;
+}
