@@ -1,0 +1,81 @@
+// Styles for the ribbon navigation/title area
+
+.site-header {
+  border: none;
+  position: fixed;
+  top: 20px;
+  width: initial;
+}
+
+/* Ribbon */
+$ribbon-height: 100px;
+$ribbon-border: 4px;
+$ribbon-border-height: $ribbon-height + ($ribbon-border * 2);
+
+.ribbon,
+.ribbon-border {
+  align-items: center;
+  display: flex;
+}
+
+.ribbon {
+  background-color: $light-brown;
+  height: $ribbon-height;
+  position: relative;
+  z-index: 1;
+}
+
+.ribbon-border {
+  background-color: $medium-brown;
+  height: $ribbon-border-height;
+  position: absolute;
+  top: -($ribbon-border);
+  width: 100%;
+}
+
+.ribbon::before,
+.ribbon-border::before,
+.ribbon::after,
+.ribbon-border::after {
+  border-top-right-radius: $ribbon-border;
+  border-bottom-right-radius: $ribbon-border;
+  border-style: solid;
+  border-width: $ribbon-height / 2;
+  box-sizing: border-box;
+  content: '';
+  height: 0;
+  left: 100%;
+  position: absolute;
+  width: 0;
+}
+
+.ribbon::before {
+  border-color: $light-brown transparent transparent $light-brown;
+}
+
+.ribbon-border::before {
+  border-color: $medium-brown transparent transparent $medium-brown;
+  border-width: $ribbon-border-height / 2;
+}
+
+.ribbon::after {
+  border-color: transparent transparent $light-brown $light-brown;
+}
+
+.ribbon-border::after {
+  border-color: transparent transparent $medium-brown $medium-brown;
+  border-width: $ribbon-border-height / 2;
+}
+
+/* Stuff inside ribbon */
+
+.header-logo img {
+  height: 65px;
+  margin-right: 20px;
+}
+
+.header-title {
+  color: $dark-brown;
+  font-family: $display-font;
+  font-size: 36px;
+}
