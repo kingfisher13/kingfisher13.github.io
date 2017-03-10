@@ -75,8 +75,9 @@ $ribbon-border-height: $ribbon-height + ($ribbon-border * 2);
 }
 
 .header-title {
-  color: $dark-brown;
+  color: $medium-brown;
   font-family: $display-font;
   font-size: 36px;
   margin: 0;
+  text-shadow: 1px 1px rgba(249,246,241,0.5), -1px -1px rgba(124, 101, 95, 1);
 }
