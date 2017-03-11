@@ -6,29 +6,39 @@ title: Kingfisher Cartography
 <div class="home">
   <div class="home-spacer"></div>
 
-  <ul class="post-list">
-    {% for collection in site.collections %}
-      {% for post in collection.docs %}
-        <li>
-          {% if post.external_link %}
-          <a href="{{ post.external_link }}" class="post-link">
-          {% else %}
-          <a class="post-link" href="{{ post.url | relative_url }}">
-          {% endif %}
-            <div class="home-post-wrapper">
-              <div class="home-post--card-wrapper">
-                <div class="home-post--image-wrapper">
-                  <img src="{{ post.image | relative_url }}" alt="">
-                </div>
-              </div>
-              <h2 class="home-post--title">
-                {{ post.title | escape }}
-              </h2>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
+  <!-- Add all posts and external links to an array -->
+  {% assign posts = "" | split: "" %}
+  {% for collection in site.collections %}
+    {% for post in collection.docs %}
+      {% assign posts = posts | push: post %}
     {% endfor %}
-  </ul>
+  {% endfor %}
+
+  <!-- Sort all posts and external links by date -->
+  {% assign sorted_posts = posts | sort: "date" | reverse %}
+
+  <ul class="post-list">
+    {% for post in sorted_posts %}
+    <li>
+      {% if post.external_link %}
+      <a href="{{ post.external_link }}" class="post-link">
+        {% else %}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {% endif %}
+          <div class="home-post-wrapper">
+            <div class="home-post--card-wrapper">
+              <div class="home-post--image-wrapper">
+                <img src="{{ post.image | relative_url }}" alt="">
+              </div>
+            </div>
+            <h2 class="home-post--title">
+              {{ post.title | escape }}
+            </h2>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
 
 </div>
