@@ -32,6 +32,10 @@
   width: calc(100% - 40px);
 }
 
+.home-post--image-wrapper img {
+  border: 1px solid $medium-brown;
+}
+
 .home-post--title {
   color: $dark-brown;
   font-family: $display-font;
