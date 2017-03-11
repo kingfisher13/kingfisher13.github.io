@@ -41,3 +41,16 @@
   margin-top: 10px;
   text-align: center;
 }
+
+/* Contours */
+.contours-blank {
+  background-image: url("contours-blank.png");
+}
+
+.contours-print:hover {
+  background-image: url("contours-orange.png");
+}
+
+.contours-interactive:hover {
+  background-image: url("contours-blue.png");
+}
