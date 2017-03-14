@@ -50,6 +50,7 @@
 /* Contours */
 .contours-blank {
   background-image: url("contours-blank.png");
+  transition: background-image 400ms ease-in-out;
 }
 
 .contours-print:hover {
