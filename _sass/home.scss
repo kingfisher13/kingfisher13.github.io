@@ -12,6 +12,7 @@
 
 .home-post-wrapper {
   margin-right: 30px;
+  position: relative;
   width: 280px;
 }
 
@@ -21,7 +22,9 @@
   display: flex;
   height: 280px;
   justify-content: center;
+  position: relative;
   width: 100%;
+  z-index: 3;
 }
 
 .home-post--image-wrapper {
@@ -49,15 +52,36 @@
 }
 
 /* Contours */
-.contours-blank {
-  background-image: url("contours-blank.png");
-  transition: background-image 400ms ease-in-out;
+.contours {
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: opacity 400ms ease-in-out;
+  height: 100%;
+  left: 1px;
+  opacity: 0;
+  top: 1px;
+  width: 100%;
+  z-index: 2;
 }
 
-.contours-print:hover {
+.contours-blank {
+  background-image: url("contours-blank.png");
+  opacity: 1;
+  z-index: 1;
+}
+
+.home-post-wrapper:hover .contours:not(.contours-blank) {
+  opacity: 1;
+}
+
+.home-post-wrapper:hover .contours-blank {
+  opacity: 0;
+}
+
+.contours-print {
   background-image: url("contours-orange.png");
 }
 
-.contours-interactive:hover {
+.contours-interactive {
   background-image: url("contours-blue.png");
 }

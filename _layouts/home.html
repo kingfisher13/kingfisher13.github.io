@@ -24,11 +24,13 @@ title: Kingfisher Cartography
       <a class="post-link" href="{{ post.url | relative_url }}">
       {% endif %}
         <div class="home-post-wrapper">
-          <div class="home-post--card-wrapper contours-blank contours-{{ post.type }}">
+          <div class="home-post--card-wrapper">
             <div class="home-post--image-wrapper">
               <img src="{{ post.image | relative_url }}" alt="">
             </div>
           </div>
+          <div class="contours contours-blank"></div>
+          <div class="contours contours-{{ post.type }}"></div>
           <h2 class="home-post--title">
             {{ post.title | escape }}
           </h2>
