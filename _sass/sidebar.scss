@@ -15,22 +15,3 @@ sidebar {
   display: flex;
   flex-direction: column;
 }
-
-.social-media--link,
-.social-media--link:visited {
-  color: $text-color;
-}
-
-.social-media--link i {
-  color: $grey-color;
-}
-
-.social-media--link:hover,
-.social-media--link:active {
-  text-decoration: none;
-}
-
-.social-media--link span:hover,
-.social-media--link span:active {
-  text-decoration: underline;
-}

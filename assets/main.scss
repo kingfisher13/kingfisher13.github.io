@@ -23,8 +23,8 @@ $light-brown:      #f9f6f1;
 $site-background:  url('texture.png') repeat;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$kf-blue:          #0194be;
+$kf-orange:        desaturate(#ff7b04, 30%);
 
 // Width of the content area
 $content-width:    1500px;
@@ -43,6 +43,26 @@ $on-laptop:        1500px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+// General Site styles
+a,
+a:visited {
+  color: $grey-color;
+  border-bottom: 1px solid $grey-color;
+}
+
+.u-nu {
+  border: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  border-color: $kf-blue;
+  color: $kf-blue;
+  text-decoration: none;
+}
+
 @import "layout";
 @import "ribbon";
 @import "sidebar";

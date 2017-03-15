@@ -18,24 +18,24 @@ title: Kingfisher Cartography
   <ul class="post-list">
     {% for post in sorted_posts %}
     <li>
-      {% if post.external_link %}
-      <a href="{{ post.external_link }}" class="post-link" target="_blank">
-      {% else %}
-      <a class="post-link" href="{{ post.url | relative_url }}">
-      {% endif %}
-        <div class="home-post-wrapper">
+      <div class="home-post-wrapper">
+        {% if post.external_link %}
+        <a href="{{ post.external_link }}" class="post-link u-nu" target="_blank">
+        {% else %}
+        <a class="post-link u-nu" href="{{ post.url | relative_url }}">
+        {% endif %}
           <div class="home-post--card-wrapper">
             <div class="home-post--image-wrapper">
               <img src="{{ post.image | relative_url }}" alt="">
             </div>
+            <div class="contours contours-blank"></div>
+            <div class="contours contours-{{ post.type }}"></div>
           </div>
-          <div class="contours contours-blank"></div>
-          <div class="contours contours-{{ post.type }}"></div>
-          <h2 class="home-post--title">
+          <h2 class="home-post--title link--{{ post.type }}">
             {{ post.title | escape }}
           </h2>
-        </div>
-      </a>
+        </a>
+      </div>
     </li>
     {% endfor %}
   </ul>

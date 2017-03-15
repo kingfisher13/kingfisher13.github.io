@@ -10,6 +10,10 @@
   flex-wrap: wrap;
 }
 
+.post-link:hover {
+  text-decoration: none;
+}
+
 .home-post-wrapper {
   margin-right: 30px;
   position: relative;
@@ -18,7 +22,8 @@
 
 .home-post--card-wrapper {
   align-items: center;
-  border: 1px solid $medium-brown;
+  border: 2px solid $medium-brown;
+  box-sizing: border-box;
   display: flex;
   height: 280px;
   justify-content: center;
@@ -33,6 +38,7 @@
   height: calc(100% - 40px);
   justify-content: center;
   width: calc(100% - 40px);
+  z-index: 3;
 }
 
 .home-post--image-wrapper img {
@@ -42,7 +48,7 @@
 }
 
 .home-post--title {
-  color: $dark-brown;
+  color: $grey-color;
   font-family: $display-font;
   font-size: 18px;
   line-height: 1;
@@ -51,15 +57,23 @@
   text-align: center;
 }
 
+.home-post-wrapper:hover .link--interactive {
+  color: $kf-blue;
+}
+
+.home-post-wrapper:hover .link--print {
+  color: $kf-orange;
+}
+
 /* Contours */
 .contours {
   background-repeat: no-repeat;
   position: absolute;
   transition: opacity 400ms ease-in-out;
   height: 100%;
-  left: 1px;
+  left: 0;
   opacity: 0;
-  top: 1px;
+  top: 0;
   width: 100%;
   z-index: 2;
 }
