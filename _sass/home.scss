@@ -99,3 +99,22 @@
 .contours-interactive {
   background-image: url("contours-blue.png");
 }
+
+// Mobile styles
+@include media-query($on-palm) {
+  .home-spacer {
+    height: 0;
+  }
+
+  .page-content {
+    padding: 0;
+  }
+
+  .post-list > li {
+    margin: 0 auto 30px;
+  }
+
+  .home-post-wrapper {
+    margin-right: 0;
+  }
+}

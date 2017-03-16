@@ -10,8 +10,47 @@ sidebar {
   margin-bottom: 20px;
 }
 
+.sidebar-hr--last {
+  display: none;
+}
+
 .social-media {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+}
+
+// Mobile styles
+@include media-query($on-palm) {
+  .post sidebar {
+    display: none;
+  }
+
+  sidebar {
+    padding-top: 40px;
+  }
+
+  .sidebar-hr--first {
+    display: none;
+  }
+
+  .social-media {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .social-media span {
+    display: none;
+  }
+
+  .social-media i {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .sidebar-hr--last {
+    display: block;
+    margin-bottom: 0;
+  }
 }

@@ -5,6 +5,7 @@
   position: fixed;
   top: 20px;
   width: initial;
+  z-index: 10;
 }
 
 /* Ribbon */
@@ -79,6 +80,27 @@ $ribbon-border-height: $ribbon-height + ($ribbon-border * 2);
   color: $medium-brown;
   font-family: $display-font;
   font-size: 36px;
+  line-height: 1;
   margin: 0;
   text-shadow: 1px 1px rgba(249,246,241,0.5), -1px -1px rgba(124, 101, 95, 1);
+}
+
+// Mobile styles
+@include media-query($on-palm) {
+  .site-header {
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+  }
+
+  .ribbon::before,
+  .ribbon::after,
+  .ribbon-border::before,
+  .ribbon-border::after {
+    display: none;
+  }
+
+  .header-title {
+
+  }
 }

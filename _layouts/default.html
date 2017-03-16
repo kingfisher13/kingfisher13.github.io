@@ -3,7 +3,12 @@
 
   {% include head.html %}
 
-  <body>
+  {% if page.id == null %}
+  <body class="home">
+  {% else %}
+  <body class="post">
+  {% endif %}
+
 
     {% include header.html %}
     {% include sidebar.html %}
