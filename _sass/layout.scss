@@ -1,7 +1,12 @@
 // Layout
 
 body {
+  background-color: #f4e8da;
   background: $site-background;
+}
+
+.page-content {
+  display: block;
 }
 
 header {
