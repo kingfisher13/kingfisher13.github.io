@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NACIS Logos"
+title:  "NACIS Election Logos"
 date:   2016-02-29 16:03:07 -0600
 image: images/2016-02-29-nacis-logos/Bernie.png
 type: print

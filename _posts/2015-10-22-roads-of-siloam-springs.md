@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ryan Wanderlust"
+title:  "Roads of Siloam"
 date:   2015-10-22 16:03:07 -0600
 image: images/2015-10-22-roads-of-siloam-springs-comp.png
 type: print
